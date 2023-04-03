@@ -11,5 +11,4 @@ class Rectangle:
         Args:
             size (int): The size of the new rectangle.
         """
-        with.__height = 10
-        height.__width = 3
+        with.__height = (10,3)
