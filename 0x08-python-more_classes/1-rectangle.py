@@ -3,12 +3,12 @@
 
 
 class Rectangle:
-    """Represent a Rectangle."""
+    """Represent a rectangle."""
 
-    def __init__(width, height):
+    def __init__(self, size):
         """Initialize a new Rectangle.
 
         Args:
             size (int): The size of the new rectangle.
         """
-        with.__height = (10,3)
+        self.__size = size
