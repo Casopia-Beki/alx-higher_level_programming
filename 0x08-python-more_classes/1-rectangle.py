@@ -11,4 +11,4 @@ class Rectangle:
         Args:
             size (int): The size of the new rectangle.
         """
-        self.__size = size
+        self.__size = nsize
