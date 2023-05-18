@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
-'''a class Rectangle that defines a rectangle by: (based on 5-rectangle.py)'''
+'''a class Rectangle that defines a rectangle by: (based on 7-rectangle.py)'''
 
 
 class Rectangle:
     '''A Rectangle class'''
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         '''initializes the Rectangle class'''
@@ -58,7 +59,7 @@ class Rectangle:
         if self.height == 0 or self.width == 0:
             return my_str
         for i in range(self.height):
-            my_str += "#"*self.width
+            my_str += str(self.print_symbol) * self.width
             if i != self.height - 1:
                 my_str += '\n'
         return my_str
@@ -72,3 +73,14 @@ class Rectangle:
         '''deletes an instance Rectangle'''
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
